@@ -21,9 +21,12 @@ public class Sort{
 	}
 
 	public static void main(String[] args) {
+		Random randgen = new Random();
 		int[] test = new int[100];
 		for (int x = 0; x < 101; x++){
-
+			test[x] = randgen.nextInt();
 		}
+
+		selectionSort(test);
 	}
 }
