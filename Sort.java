@@ -7,7 +7,7 @@ public class Sort{
 
 		while (index < ary.length){
 			int smallest = ary[index];
-			for (int x = index; x < ary.length; x++){
+			for (int x = 0; x < ary.length; x++){
 				if (ary[x] < smallest){
 					smallest = ary[x];
 				}
