@@ -6,17 +6,6 @@ public class Sort{
 		int[] output = new int[ary.length];
 		int smallest = ary[0];
 
-		while (index < ary.length){
-			for(int x = index; x < ary.length; x++){
-				if (ary[x] < smallest){
-					System.out.print(ary[x] + ", " + smallest);
-					System.out.println();
-					smallest = ary[x];
-				}
-			}
-			output[index] = smallest;
-			index++;
-		}
 
 		System.out.println("aaaaa");
 		for (int x : output){
