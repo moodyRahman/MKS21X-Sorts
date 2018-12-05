@@ -4,8 +4,21 @@ public class Sort{
 	public static void selectionSort(int[] ary){
 		int index = 0;
 		int[] output = new int[ary.length];
-		int smallest = ary[0];
 
+		while (index < ary.length){
+			int smallest = ary[index];
+			for (int x = index; x < ary.length; x++){
+				if (ary[x] < smallest){
+					smallest = ary[x];
+				}
+			}
+			output[index] = smallest;
+			index++;
+		}
+
+		for (int x : ary){
+			System.out.println(x);
+		}
 
 		System.out.println("aaaaa");
 		for (int x : output){
