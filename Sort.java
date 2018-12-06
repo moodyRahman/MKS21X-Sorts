@@ -9,11 +9,11 @@ public class Sort{
 					int temp = ary[x];
 					ary[x] = ary[val];
 					ary[val] = temp;
-					for (int b : ary){
-						System.out.print(b);
-						System.out.print(", ");
-					}
-					System.out.println();
+					// for (int b : ary){
+					// 	System.out.print(b);
+					// 	System.out.print(", ");
+					// }
+					// System.out.println();
 				}
 			}
 		}
@@ -37,10 +37,10 @@ public class Sort{
 		}
 		System.out.println("\nEND OG");
 
-		// long startTime = System.nanoTime();
+		long startTime = System.nanoTime();
 		selectionSort(test);
-		// long endTime = System.nanoTime();
-		// long duration = (endTime - startTime);
-		// System.out.println(duration / 1000000);
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime);
+		System.out.println(duration / 1000000);
 	}
 }
