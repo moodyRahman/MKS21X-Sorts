@@ -9,11 +9,6 @@ public class Sort{
 					int temp = ary[x];
 					ary[x] = ary[val];
 					ary[val] = temp;
-					// for (int b : ary){
-					// 	System.out.print(b);
-					// 	System.out.print(", ");
-					// }
-					// System.out.println();
 				}
 			}
 		}
