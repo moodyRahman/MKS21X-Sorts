@@ -19,32 +19,47 @@ public class Sort{
 		}
 	}
 
-	public static void selectionSort(int[] data){
-		
+
+	public static void bubbleSort(int[] data){
+		int length = data.length;    //assume the list is not sorted
+		boolean sorted = false;      //but it needs to be set to true to trip wire back
+		while (!sorted){
+			sorted = true;
+			for (int index = 0; index < length - 1; index++){
+				if (data[index] > data[index+1]){
+					int temp = data[index];
+					data[index] = data[index + 1];
+					data[index + 1] = temp;
+					sorted = false;
+				}
+			}
+		}
 	}
 
 	public static void main(String[] args) {
 		Random randgen = new Random();
-		int[] test = new int[20];
-		for (int x = 0; x < 20; x++){
+		int[] test = new int[20000];
+		for (int x = 0; x < 20000; x++){
 			test[x] = randgen.nextInt() % 9;
 		}
 
-		System.out.print("OG LIST \n");
-		for (int x: test){
-			System.out.print(x + ", ");
-		}
-		System.out.println("\nEND OG");
+		// System.out.print("OG LIST \n");
+		// for (int x: test){
+		// 	System.out.print(x + ", ");
+		// }
+		// System.out.println("\nEND OG");
 
 		long startTime = System.nanoTime();
-		selectionSort(test);
+		bubbleSort(test);
 		long endTime = System.nanoTime();
 		long duration = (endTime - startTime);
-		System.out.println(duration / 1000000);
+		System.out.println(duration / 100000000.0);
 		for (int x : test){
 			System.out.print(x);
 			System.out.print(", ");
 		}
 		System.out.println();
+
+
 	}
 }
