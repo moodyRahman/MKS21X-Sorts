@@ -40,7 +40,7 @@ public class Sort{
 		Random randgen = new Random();
 		int[] test = new int[20000];
 		for (int x = 0; x < 20000; x++){
-			test[x] = randgen.nextInt() % 9;
+			test[x] = randgen.nextInt() % 10000;
 		}
 
 		// System.out.print("OG LIST \n");
