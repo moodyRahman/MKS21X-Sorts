@@ -17,11 +17,10 @@ public class Sort{
 				}
 			}
 		}
+	}
 
-		for (int x : ary){
-			System.out.print(x);
-			System.out.print(", ");
-		}
+	public static void selectionSort(int[] data){
+		
 	}
 
 	public static void main(String[] args) {
@@ -42,5 +41,10 @@ public class Sort{
 		long endTime = System.nanoTime();
 		long duration = (endTime - startTime);
 		System.out.println(duration / 1000000);
+		for (int x : test){
+			System.out.print(x);
+			System.out.print(", ");
+		}
+		System.out.println();
 	}
 }
