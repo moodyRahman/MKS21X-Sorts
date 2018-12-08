@@ -1,6 +1,11 @@
 import java.util.Random;
 
 public class Sort{
+
+	/**Selection sort of an int array.
+	*Upon completion, the elements of the array will be in increasing order.
+	*@param data  the elements to be sorted.
+	*/
 	public static void selectionSort(int[] ary){
 		int length = ary.length;
 		for (int x = 0; x < length - 1; x++){
@@ -14,7 +19,10 @@ public class Sort{
 		}
 	}
 
-
+	/**Bubble sort of an int array.
+  	*Upon completion, the elements of the array will be in increasing order.
+  	*@param data  the elements to be sorted.
+  	*/
 	public static void bubbleSort(int[] data){
 		int length = data.length;    //assume the list is not sorted
 		boolean sorted = false;      //but it needs to be set to true to trip wire back
@@ -45,14 +53,16 @@ public class Sort{
 		// System.out.println("\nEND OG");
 
 		long startTime = System.nanoTime();
-		bubbleSort(test);
+		selectionSort(test);
 		long endTime = System.nanoTime();
 		long duration = (endTime - startTime);
+		// for (int x : test){
+		// 	System.out.print(x);
+		// 	System.out.print(", ");
+		// }
+		System.out.println();
+		System.out.println();
 		System.out.println(duration / 100000000.0);
-		for (int x : test){
-			System.out.print(x);
-			System.out.print(", ");
-		}
 		System.out.println();
 
 
