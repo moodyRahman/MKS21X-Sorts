@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Sort{
+public class Sorts{
 
 	/**Selection sort of an int array.
 	*Upon completion, the elements of the array will be in increasing order.
@@ -62,7 +62,7 @@ public class Sort{
 		// }
 		System.out.println();
 		System.out.println();
-		System.out.println(duration / 100000000.0);
+		System.out.println(duration / 1000000000.0);
 		System.out.println();
 
 
