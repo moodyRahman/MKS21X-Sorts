@@ -61,11 +61,11 @@ public class Sorts{
 			test[x] = randgen.nextInt() % 10000;
 		}
 
-		System.out.print("OG LIST \n");
-		for (int x: test){
-			System.out.print(x + ", ");
-		}
-		System.out.println("\nEND OG");
+		// System.out.print("OG LIST \n");
+		// for (int x: test){
+		// 	System.out.print(x + ", ");
+		// }
+		// System.out.println("\nEND OG");
 
 		long startTime = System.nanoTime();
 		insertionSort(test);
