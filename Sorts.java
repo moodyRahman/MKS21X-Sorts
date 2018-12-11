@@ -47,10 +47,10 @@ public class Sorts{
 			int prev = x-1;
 
 			while(prev > 0 && data[prev] > key){
-				data[prev - 1] = data[prev];
-				prev = prev + 1;
+				data[prev + 1] = data[prev];
+				prev = prev - 1;
 			}
-			data[prev - 1] = key;
+			data[prev + 1] = key;
 		}
 	}
 
