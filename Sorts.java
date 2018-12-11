@@ -8,7 +8,7 @@ public class Sorts{
 	*/
 	public static void selectionSort(int[] ary){
 		int length = ary.length;
-		for (int x = 1; x < length - 1; x++){
+		for (int x = 0; x < length - 1; x++){
 			for (int val = x + 1; val < length; val++){
 				if (ary[x] > ary[val]){
 					int temp = ary[x];
