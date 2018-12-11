@@ -39,10 +39,25 @@ public class Sorts{
 		}
 	}
 
+	public static void insertionSort(int[] data){
+		int length = data.length;
+
+		for(int x = 0; x < data.length;x++){
+			int key = data[x];
+			int prev = x-1;
+
+			while(prev > 0 && data[prev] > key){
+				data[prev - 1] = data[prev];
+				prev = prev + 1;
+			}
+			data[prev - 1] = key;
+		}
+	}
+
 	public static void main(String[] args) {
 		Random randgen = new Random();
-		int[] test = new int[20000];
-		for (int x = 0; x < 20000; x++){
+		int[] test = new int[200000];
+		for (int x = 0; x < 200000; x++){
 			test[x] = randgen.nextInt() % 10000;
 		}
 
@@ -53,18 +68,16 @@ public class Sorts{
 		// System.out.println("\nEND OG");
 
 		long startTime = System.nanoTime();
-		selectionSort(test);
+		insertionSort(test);
 		long endTime = System.nanoTime();
 		long duration = (endTime - startTime);
-		// for (int x : test){
-		// 	System.out.print(x);
-		// 	System.out.print(", ");
-		// }
+		for (int x : test){
+			System.out.print(x);
+			System.out.print(", ");
+		}
 		System.out.println();
 		System.out.println();
 		System.out.println(duration / 1000000000.0);
 		System.out.println();
-
-
 	}
 }
