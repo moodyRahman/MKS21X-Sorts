@@ -42,7 +42,7 @@ public class Sorts{
 	public static void insertionSort(int[] data){
 		int length = data.length;
 
-		for(int x = 0; x < data.length;x++){
+		for(int x = 1; x < data.length;x++){
 			int key = data[x];
 			int prev = x-1;
 
